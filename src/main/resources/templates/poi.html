@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#httpServletRequest.getContextPath()+'/'}">
+    <meta charset="UTF-8">
+    <title>导入Excel数据</title>
+</head>
+<body>
+<h1>这是用户信息页</h1>
+
+<form action="excel/upload" method="post" enctype="multipart/form-data">
+
+    <input name="file" type="file" />
+    <input type="submit"/>
+</form>
+
+
+</body>
+</html>
