@@ -70,11 +70,8 @@ public class ExcelController {
                 user.setName(name);
                 user.setUsername(username);
                 user.setCreateTime(date);
-
-                //存储到数据库
-
-
             }
+            //存储到数据库
             userService.insertUser(user);
 
         }
