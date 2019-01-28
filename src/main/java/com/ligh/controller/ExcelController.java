@@ -1,8 +1,6 @@
 package com.ligh.controller;
 
-/**
- * Created by ${ligh} on 2019/1/25 上午8:42
- */
+
 import com.ligh.domain.User;
 import com.ligh.service.UserService;
 import com.ligh.utils.ExcelUtils;
@@ -27,6 +25,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Created by ${ligh} on 2019/1/25 上午8:42
+ */
 @Controller
 public class ExcelController {
     @Autowired
@@ -84,9 +85,7 @@ public class ExcelController {
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet sheet = workbook.createSheet("统计表");
         createTitle(workbook,sheet);
-       /* List<User> rows = new ArrayList<>();//userService.getAll();
-        rows.add(new User((long)1,"小明","牛逼",new Date()));
-        rows.add(new User((long)2,"中明","牛2逼",new Date()));*/
+        //查询数据库,获取想要导出的数据列表
         List<User> rows = userService.queryAllUser();
         //设置日期格式
         HSSFCellStyle style = workbook.createCellStyle();
